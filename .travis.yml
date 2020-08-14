@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t pi3ni0/multi-docker -f Dockerfile.dev ./client
+  - docker build -t pi3ni0/multi-docker -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true pi3ni0/react-test npm test
